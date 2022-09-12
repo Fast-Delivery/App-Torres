@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="80dp"
+    android:layout_height="match_parent"
+    tools:context=".ValidacaoActivity">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="4dp"
+        app:passwordToggleEnabled="true">
+
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutpassword"
+            android:layout_alignBottom="@+id/layoutpassword"
+            android:clickable="true"
+            android:hint="@string/Validacao"
+            android:inputType="textPassword"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutemail"
+        android:layout_width="257dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="2dp">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layoutemail"
+            android:layout_alignTop="@+id/layoutemail"
+            android:layout_marginBottom="0dp"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <Button
+        android:id="@+id/btn_enviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="132dp"
+        android:layout_marginBottom="11dp"
+        android:background="@drawable/botao_customizado"
+        android:text="@string/btn_validar" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutpassword"
+        android:layout_marginTop="7dp"
+        android:text="Abra sua Caixa de E-mail."
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="5dp"
+        android:text="Veja se não está nos Spans ou na Lixeira."
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:text="Validação de E-mail."
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/link_reenviar"
+        android:layout_width="120dp"
+        android:layout_height="17dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="163dp"
+        android:layout_marginLeft="163dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:text="Reenviar."
+        android:textColor="@android:color/holo_red_dark" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/layoutemail"
+        android:visibility="gone" />
+
+
+
+
+</RelativeLayout>

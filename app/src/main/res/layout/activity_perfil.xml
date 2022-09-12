@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PerfilActivity">
+    <!---android:background="@android:color/holo_red_dark"-->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="89dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="158dp"
+        android:layout_marginRight="158dp"
+        app:srcCompat="@drawable/ic_camera" />
+
+    <Button
+        android:id="@+id/btn_photo_upload"
+        style="@style/Widget.AppCompat.ActionButton.CloseMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:text="@string/Editar" />
+
+    <LinearLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/btn_photo_upload"
+        android:weightSum="2"
+        android:id="@+id/layout_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_personal" />
+
+        <EditText
+
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:hint="@string/Nome"
+            android:inputType="textPersonName"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/layout_text"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_email" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:hint="@string/email"
+            android:inputType="textPersonName"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="262dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginRight="77dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/botao_customizado"
+        android:text="@string/btn_voltar"
+        android:textColor="@android:color/black" />
+
+    <!---android:backgroundTint="@color/colorPrimary2"-->
+</RelativeLayout>

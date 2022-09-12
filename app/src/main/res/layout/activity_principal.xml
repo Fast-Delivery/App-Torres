@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="80dp"
+    android:layout_height="match_parent"
+    tools:context=".Recuperar_SenhaActivity">
+
+    <!--
+    android:background="@color/colorPrimaryDark2"-->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="87dp"
+        android:layout_height="37dp"
+        android:layout_below="@+id/em"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="86dp"
+        android:layout_marginLeft="86dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/ic_email" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_image"
+        android:layout_marginTop="1dp">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_enviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="9dp"
+        android:background="@drawable/botao_customizado"
+        android:text="@string/Enviar" />
+
+    <TextView
+        android:id="@+id/em"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:text="@string/textRecuperar"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/link_Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutemail"
+        android:layout_marginTop="76dp"
+        android:text="@string/Aaaah"
+        android:textSize="10sp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="113dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutemail"
+        android:layout_alignBottom="@+id/layoutpassword"
+        android:layout_marginTop="14dp"
+        android:clickable="true"
+        android:hint="@string/Val"
+        android:inputType="textPassword"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/link_Login"
+        android:layout_marginTop="30dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_verificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutemail"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/botao_customizado"
+        android:layout_toEndOf="@+id/password"
+        android:layout_toRightOf="@+id/password"
+        android:text="@string/btn_verificar"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>
